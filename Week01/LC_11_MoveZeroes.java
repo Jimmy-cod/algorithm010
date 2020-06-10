@@ -14,4 +14,31 @@ class Solution {
             j++;
         }
     }
+
+    //swap 交换法, j 记录着0的位置
+    public void moveZeroes2(int[] nums) {
+        int j =0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=0){
+                int temp = nums[j];
+                nums[j] = nums[i];
+                nums[i] = temp;
+                j++;
+            }
+        }
+    }
+
+    //j 记录着0的位置，直接覆盖，只有 i != j 时才要覆盖，覆盖完把nums[i]顺便补上0
+    public void moveZeroes3(int[] nums) {
+        int j =0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=0){
+                if (i!=j) {
+                    nums[j] = nums[i];
+                    nums[i] = 0;
+                }
+                j++;
+            }
+        }
+    }
 }
