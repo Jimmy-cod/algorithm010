@@ -18,8 +18,9 @@ class Solution {
 /*看完题解后：
 迭代法:
 
-class Solution {
-      ListNode res = new ListNode();
+public class Solution {
+    ListNode res = new ListNode();
+    
     public ListNode reverseList(ListNode head) {
       
         if (head == null){
