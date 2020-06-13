@@ -16,3 +16,9 @@ https://gitmind.com/
 3.终止条件
 
 链接：https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/hua-jie-suan-fa-24-liang-liang-jiao-huan-lian-biao/
+
+**用递归做建表题：
+1.返回值：每一层调用都返回排序好的链表头
+2.只要考虑本层的逻辑
+3.本层的链表尾巴连上返回的链表头
+21. 合并两个有序链表;
