@@ -1,5 +1,6 @@
-//move k times for all element - O(k^n)
+
 class Solution {
+    //move k times for all elements - O(k^n)
     public void rotate(int[] nums, int k) {
         int length = nums.length;
         for(int i=0;i<k;i++){
