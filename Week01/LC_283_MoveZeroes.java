@@ -33,6 +33,7 @@ class Solution {
         int j =0;
         for(int i=0;i<nums.length;i++){
             if(nums[i]!=0){
+                //因为值已经copy到nums[j], 可以把后面的值都设为0；这样可以在一个循环结束
                 if (i!=j) {
                     nums[j] = nums[i];
                     nums[i] = 0;
