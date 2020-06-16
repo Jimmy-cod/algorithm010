@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class BinanryTree_Traversal {
 
@@ -17,7 +14,6 @@ public class BinanryTree_Traversal {
     //144. 二叉树的前序遍历: 从根节点开始，每次迭代弹出当前栈顶元素，并将其孩子节点压入栈中，先压右孩子再压左孩子。
     public List<Integer> preorder(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
-
         List<Integer> result = new ArrayList<>();
         if (root ==null){
             return result;
@@ -138,6 +134,34 @@ public class BinanryTree_Traversal {
         }
         return res;
     }
+
+    //    102. 二叉树的层序遍历
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null){
+            return res;
+        }
+        Queue<TreeNode> queue = new ArrayDeque<TreeNode>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+
+            int n =queue.size(); //need the store size to n, as quene size keep changing inside loop
+            List<Integer> list = new ArrayList<Integer>();
+            for (int i=0; i<n; i++){
+                TreeNode curr = queue.poll();
+                list.add(curr.val);
+                if (curr.left != null){
+                    queue.add(curr.left);
+                }
+                if (curr.right != null){
+                    queue.add(curr.right);
+                }
+            }
+            res.add(list);
+        }
+        return res;
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;
