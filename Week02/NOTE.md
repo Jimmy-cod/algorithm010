@@ -1,4 +1,10 @@
 学习笔记
+ArrayList / List 初始化：  
+List<Integer> list = Arrays.asList(1,2);
+
+Array 初始化： 
+int[]{map.get(target-nums[i]),nums[i]};
+                
 HashMap 源码：
 为啥要这么多中间变量呢？ tab, first, e; n,k 感觉诚心让我们不容易看懂源码:-)
 这些中间变量的作用是存储取出的值？ tab = table 有啥作用，为啥不能直接在table上操作？
