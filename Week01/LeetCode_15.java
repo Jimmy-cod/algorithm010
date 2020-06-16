@@ -13,7 +13,7 @@ class Solution {
             //nums[i] is the first integer of three
             // 去重
             //if (i>0 && nums[i] == nums[i-1]) continue;
-            //用while一样效果，不用回答for去判断
+            //用while一样效果，不用回到for去判断
             while (i>0 && i<len-1 && nums[i] == nums[i-1]){
                 i++;
             }
