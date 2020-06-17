@@ -112,9 +112,9 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
         }  
         return null;  
     }  
-    <br/>
+    
+    
 处理步骤如下：<br/>
-
 （1）当key为null时，调用getForNullKey()，它的源码如下：<br/>
 
     private V getForNullKey() {  
