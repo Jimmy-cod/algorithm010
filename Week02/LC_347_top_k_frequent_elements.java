@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 
 public class LC_347_top_k_frequent_elements {
     //using HashMap to keep frequent of all elements
-    //using a heap to keep top K frequent from hashmap entry
+    //using a 最小堆（min heap） to keep top K frequent from hashmap entry
     public static int[] topKFrequent(int[] nums, int k) {
         if (k==0){
             return new int[0];
