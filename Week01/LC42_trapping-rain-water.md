@@ -1,5 +1,8 @@
 class Solution {
+
     //两头逼近，以矮的那头为计算高度，向中间逼近，与11. 盛最多水的容器 相似
+    
+    
     public int trap(int[] height) {
         int ans = 0;
         int len = height.length;
