@@ -74,7 +74,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
          addEntry(0, null, value, 0);
          return null;
      }
-     <br/>
+     
      
 从代码可以看出，如果key为null的值，默认就存储到table[0]开头的链表了。然后遍历table[0]的链表的每个节点Entry，
 如果发现其中存在节点Entry的key为null，就替换新的value，然后返回旧的value，
@@ -93,9 +93,9 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
         if (size++ >= threshold)
             resize(2 * table.length);
     }
-<br/>
+    
 
-**get(Object key)方法<br/>
+**get(Object key)方法:
 
 作用是根据键来获取值<br/>
 
