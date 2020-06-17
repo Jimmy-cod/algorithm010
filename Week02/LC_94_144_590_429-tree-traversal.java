@@ -1,6 +1,8 @@
+package Week02;
+
 import java.util.*;
 
-public class BinanryTree_Traversal {
+class BinanryTree_Traversal {
 
     /*
     * 深度优先DFS:
@@ -142,6 +144,7 @@ public class BinanryTree_Traversal {
             return res;
         }
         Queue<TreeNode> queue = new ArrayDeque<TreeNode>();
+
         queue.add(root);
         while (!queue.isEmpty()){
 
