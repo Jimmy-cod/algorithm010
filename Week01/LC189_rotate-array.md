@@ -1,7 +1,7 @@
 
 class Solution {
 
-
+    //Brute-force
     //move k times for all elements - O(k^n)
     
     public void rotate(int[] nums, int k) {
