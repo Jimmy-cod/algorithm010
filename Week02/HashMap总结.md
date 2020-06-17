@@ -57,6 +57,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
  
  处理步骤如下：<br/>
  （1）判断key是否为null，若为null，调用putForNullKey(value)处理。这个方法代码如下：<br/>
+ 
      /**
       * Offloaded version of put for null keys
       */
@@ -74,6 +75,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
          return null;
      }
      <br/>
+     
 从代码可以看出，如果key为null的值，默认就存储到table[0]开头的链表了。然后遍历table[0]的链表的每个节点Entry，
 如果发现其中存在节点Entry的key为null，就替换新的value，然后返回旧的value，
 如果没发现key等于null的节点Entry，就增加新的节点。<br/>
@@ -112,6 +114,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
     }  
     <br/>
 处理步骤如下：<br/>
+
 （1）当key为null时，调用getForNullKey()，它的源码如下：<br/>
 
     private V getForNullKey() {  
@@ -121,6 +124,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
         }  
         return null;  
     }  
+    
 返回table[0]开头的链表的键为null的节点的值<br/>
 
 （2）当键不为null时，依然计算hash值，然后找到具体在哪个table[indexFor(hash, table.length)]
