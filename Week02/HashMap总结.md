@@ -13,11 +13,14 @@ hashMap底层有一个entry数组(entry是hashMap的内部类，它包含了键k
 
 三、HashMap提供的三个构造函数：
 
-1、HashMap()：构造一个具有默认初始容量 (16) 和默认加载因子 (0.75) 的空 HashMap。
+1、HashMap()：
+构造一个具有默认初始容量 (16) 和默认加载因子 (0.75) 的空 HashMap。
 
-2、HashMap(int initialCapacity)：构造一个带指定初始容量和默认加载因子 (0.75) 的空 HashMap。
+2、HashMap(int initialCapacity)：
+构造一个带指定初始容量和默认加载因子 (0.75) 的空 HashMap。
 
-3、HashMap(int initialCapacity, float loadFactor)：构造一个带指定初始容量和加载因子的空 HashMap。
+3、HashMap(int initialCapacity, float loadFactor)：
+构造一个带指定初始容量和加载因子的空 HashMap。
 
 常量
 static final int DEFAULT_INITIAL_CAPACITY = 16;
@@ -27,7 +30,8 @@ static final int MAXIMUM_CAPACITY = 1 << 30;
 static final float DEFAULT_LOAD_FACTOR = 0.75f;
 负载因子：75%
 
-** put(Object key,Object value)方法
+** put(Object key,Object value)方法：
+
 作用是存储一个键-值对
 
     public V put(K key, V value) {
@@ -50,7 +54,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;
         return null;
     }
  
- 处理步骤如下：
+ 处理步骤如下：<br/>
  （1）判断key是否为null，若为null，调用putForNullKey(value)处理。这个方法代码如下：
      /**
       * Offloaded version of put for null keys
