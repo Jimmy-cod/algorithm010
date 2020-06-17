@@ -1,4 +1,4 @@
-class Solution {
+public class LeetCode_15 {
 //15. 三数之和
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

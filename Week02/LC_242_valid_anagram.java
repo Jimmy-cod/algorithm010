@@ -1,5 +1,9 @@
+package Week02;
 
-class Solution {
+import java.util.HashMap;
+
+public class LC_242_valid_anagram {
+
     public boolean isAnagram(String s, String t) {
         //Brute force
         //#1. sort, compare one by one
