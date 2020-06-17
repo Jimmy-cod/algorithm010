@@ -130,3 +130,30 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
 （2）当键不为null时，依然计算hash值，然后找到具体在哪个table[indexFor(hash, table.length)]
 节点开头的链表中，遍历此链表查找是否存在搜索条件中的key值，返回其value。若没有符合条件的key值，返回null。<br/>
 
+
+***HashMap常考问题总结 <br/>
+
+最后补充一些面试时候常问到的一些问题总结。
+
+（1）HashMap和HashTable的区别？<br/>
+
+HashMap是非线程安全的，HashTable是线程安全的<br/>
+HashMap的键和值都允许有null值存在，而HashTable则不行<br/>
+因为线程安全的问题，HashMap效率比HashTable的要高<br/>
+哈希值的使用不同，HashMap要根据hashCode二次计算得到hash值，而HashTable直接使用对象的hashCode<br/>
+继承的父类不同，HashMap继承自AbstractMap<K,V>，而HashTable继承自Dictionary<K,V> <br/>
+
+（2）HashMap中的键可以是任何对象或数据类型吗？<br/>
+
+可以为null，但是不能为可变对象。如果为可变对象的话，对象中的属性改变则对象的hashCode也进行了相应的改变，导致下次无法查找到已存在Map中的数据。
+如果可变对象在HashMap中被当做键，那么就要小心在它的属性改变时，不要改变它的hashCode。只要保证成员变量的改变不会相应改变其hashCode即可。
+<br/>
+（3）HashTable如何实现线程安全？<br/>
+
+实现原理是在对应的方法上添加了synchronized关键字进行修饰，由于在执行此方法时需要获得对象锁，
+因此执行起来比较慢。如果想实现线程安全的HashMap的话，推荐使用ConcurrentHashMap。<br/>
+
+
+参考资料:
+链接：https://www.jianshu.com/p/2f50d21dbfdc
+
