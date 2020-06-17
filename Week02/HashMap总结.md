@@ -22,17 +22,17 @@ hashMap底层有一个entry数组(entry是hashMap的内部类，它包含了键k
 3、HashMap(int initialCapacity, float loadFactor)：
 构造一个带指定初始容量和加载因子的空 HashMap。
 
-常量
-static final int DEFAULT_INITIAL_CAPACITY = 16;
-初始容量：16
-static final int MAXIMUM_CAPACITY = 1 << 30;
-最大容量：2的30次方 => 1073741824
-static final float DEFAULT_LOAD_FACTOR = 0.75f;
-负载因子：75%
+常量<br/>
+static final int DEFAULT_INITIAL_CAPACITY = 16;<br/>
+初始容量：16<br/>
+static final int MAXIMUM_CAPACITY = 1 << 30;<br/>
+最大容量：2的30次方 => 1073741824<br/>
+static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
+负载因子：75%<br/>
 
 ** put(Object key,Object value)方法：
 
-作用是存储一个键-值对
+作用是存储一个键-值对<br/>
 
     public V put(K key, V value) {
         if (key == null)
