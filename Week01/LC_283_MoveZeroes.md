@@ -1,4 +1,6 @@
 class Solution {
+
+
     public void moveZeroes(int[] nums) {
         //把0用后面的数代替，并统计0的个数记录在j上
         int j =0;

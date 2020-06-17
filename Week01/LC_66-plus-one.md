@@ -1,4 +1,12 @@
 class Solution {
+
+/*
+加一的所以有可能的情况就只有两种：
+
+1. 除 99 之外的数字加一；
+2. 数字 99。
+*/
+
     public int[] plusOne(int[] digits) {
         //here, need to loop from eno of digits
         for (int i = digits.length-1; i>=0;i--){

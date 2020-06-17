@@ -1,5 +1,7 @@
-//用数组指针时，要特别注意边界问题，多用特殊cases检查边界问题
 class Solution {
+
+//用数组指针时，要特别注意边界问题，多用特殊cases检查边界问题
+
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int p = m+n-1;
         int p1 = m-1;
