@@ -23,6 +23,10 @@ public class LC_239_sliding_window_maximum {
                     hi++;
                 } else {
                     ans[lo] = nums[queue.getFirst()];
+                    //queue顶元素是窗口的最后一个值，queue从queue中移除顶元素
+                    if (queue.getFirst() == lo) {
+                        queue.removeFirst();
+                    }
                     lo++;
                 }
             }
@@ -31,6 +35,7 @@ public class LC_239_sliding_window_maximum {
             return ans;
         }
 
+        // monotonous queue
         //queue 只存数组下标，每次进queue，从后比较其他下标的值，如果比它小，扔掉。最后加入该下标。
         //queue 允许超过k个元素，因为我们只关心最大值
         private void addQueue(Deque<Integer> q, int[] nums, int hi) {
@@ -40,12 +45,12 @@ public class LC_239_sliding_window_maximum {
             q.addLast(hi);
         }
 
-
+//----------------------test-------------//
     public static void main(String[] args) {
         LC_239_sliding_window_maximum solution = new LC_239_sliding_window_maximum();
-        int[] nums = new int[]{1,3,-1,-3,5,3,6,7};
-        int k =3;
-        int[] ans = solution.maxSlidingWindow(nums,3);
+        int[] nums = new int[]{1,-1};
+        int k =1;
+        int[] ans = solution.maxSlidingWindow(nums,k);
 
     }
 }
