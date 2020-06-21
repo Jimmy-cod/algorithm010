@@ -7,6 +7,9 @@ public class LC_200_number_of_islands {
 * 如果题目更复杂一点，这很容易出 bug。
 * */
     public int numIslands(char[][] grid) {
+        if (grid == null || grid.length ==0 ){
+            return 0;
+        }
         int nr = grid.length;
         int nc = grid[0].length;
         int ans = 0;
