@@ -165,6 +165,34 @@ class BinanryTree_Traversal {
         return res;
     }
 
+    //递归解法 BPS
+    public List<List<Integer>> levelOrder_bps(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null){
+            return res;
+        }
+        bps(root,0,res);
+        return res;
+    }
+
+    private void bps(TreeNode curr,int level, List<List<Integer>> res) {
+        if (curr == null){
+            return;
+        }
+        // it's new level
+        if (level + 1 > res.size()){
+            res.add(new ArrayList<Integer>());
+        }
+        res.get(level).add(curr.val);
+        //drill down
+        if (curr.left != null){
+            bps(curr.left,level+1,res);
+        }
+        if (curr.right != null){
+            bps(curr.right, level+1, res);
+        }
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;

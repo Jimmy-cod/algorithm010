@@ -1,9 +1,6 @@
 package Week02;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class LC_347_top_k_frequent_elements {
     //using HashMap to keep frequent of all elements
@@ -37,6 +34,7 @@ public class LC_347_top_k_frequent_elements {
             if (e == null) break;
             topK[i] = (Integer) e.getKey();
         }
+
         return topK;
     }
 
