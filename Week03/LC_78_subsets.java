@@ -28,7 +28,7 @@ public class LC_78_subsets {
             ans.add(list);
             return;
         }
-        dfs(ans,nums,list.cl,level+1);
+        dfs(ans,nums,list,level+1);
         list.add(nums[level]);
         dfs(ans,nums,list,level+1);
         list.remove(list.size()-1);
