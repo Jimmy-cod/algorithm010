@@ -1,18 +1,25 @@
 package Week03;
 
+import Common.BuildBinaryTree;
+import Common.TreeNode;
+
 import java.util.Deque;
 import java.util.LinkedList;
 
 public class LC111_min_depth_b_tree {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
+    public static void main(String[] args) {
+        Integer[] list = {3,9,20,1,null,15,7};
+        TreeNode root = BuildBinaryTree.buildBinaryTree(list);
+
+        int res = minDepth(root);
+
+        System.out.println("res = "+res);
+
+
     }
 
-    public int minDepth(TreeNode root) {
+    public static int minDepth(TreeNode root) {
         if (root == null) return 0;
         //1.左孩子和有孩子都为空的情况，说明到达了叶子节点，直接返回1即可
         if (root.right == null && root.left == null) return 1;
@@ -22,7 +29,10 @@ public class LC111_min_depth_b_tree {
 
         //当节点左右孩子有一个为空时，返回不为空的孩子节点的深度
         //as sometimes return leftDep, sometime return rightDep, need to be  rightDep +leftDep + 1
-        if (root.right == null || root.left == null) return rightDep +leftDep + 1;
+        //if (root.right == null || root.left == null) return rightDep +leftDep + 1;
+        // 上面公式其实是如下，root.right == null 时， rightDep=0
+        if (root.right == null) return leftDep + 1;
+        if (root.left == null) return rightDep + 1;
 
         //当节点左右孩子都不为空时，返回左右孩子较小深度的节点值
         return Math.min(leftDep,rightDep)+1;

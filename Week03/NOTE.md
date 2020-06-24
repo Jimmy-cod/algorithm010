@@ -18,6 +18,12 @@ Java 递归模板
         
     }
     
-    Didide & Conquer
+ 分治的递归模板  Didide & Conquer template:
+ 
+        //1. terminator
+        //2. process (split your big problem)
+        //3. drill down (sub-problems)
+        //4. merge(sub-result)
+        //5. reverse states
     
     
