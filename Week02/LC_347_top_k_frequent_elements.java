@@ -10,6 +10,7 @@ public class LC_347_top_k_frequent_elements {
             return new int[0];
         }
         HashMap<Integer,Integer> map = new HashMap();
+
         for (int n : nums){
             map.put(n,map.getOrDefault(n,0)+1) ;
         }
