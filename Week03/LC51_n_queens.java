@@ -61,7 +61,9 @@ public class LC51_n_queens {
                 if (i==num){
                     sb.append("Q");
                 }
-                else  sb.append(".");
+                else {
+                    sb.append(".");
+                }
             }
 //            sb.replace(num, num + 1, "Q");
             board.add(sb.toString());
@@ -72,7 +74,9 @@ public class LC51_n_queens {
     /*------------------below is first approach, not--------------*/
     public List<List<String>> solveNQueens_1(int n) {
         List<List<String>> res = new ArrayList<>();
-        if (n<1) return res;
+        if (n<1) {
+            return res;
+        }
         String[][] board = new String[n][n];
 
         backtrack(0,n,board,res);
@@ -86,7 +90,9 @@ public class LC51_n_queens {
             return;
         }
         for (int col =0;col<n;col++){
-            if (! isValid(board,row,col,n)) continue;
+            if (! isValid(board,row,col,n)) {
+                continue;
+            }
             board[row][col] = "Q";
             backtrack(row+1,n,board,res);
             board[row][col] = ".";
@@ -115,7 +121,9 @@ public class LC51_n_queens {
         for (String[] line : array) {
             StringBuilder builder = new StringBuilder();
             for (String s: line){
-                if (s == null) s=".";
+                if (s == null) {
+                    s=".";
+                }
                 builder.append(s);
             }
             result.add(builder.toString());

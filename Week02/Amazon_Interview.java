@@ -12,6 +12,9 @@ public class Amazon_Interview {
     int ans = -1;
     HashMap<String,Integer> map = new HashMap<String,Integer>();
     public int daysOfUpdate(int rows, int columns, char[][] grid) {
+        if (rows <=0 || columns<=0) {
+            return ans;
+        }
 
         nr = rows;
         nc = columns;
@@ -21,7 +24,9 @@ public class Amazon_Interview {
             for(int j = 0;j<columns;j++){
 
                 if (grid[i][j] == '0'){
-                    bfs(grid,i,j,0);
+                    int res = bfs(grid,i,j);
+                    System.out.println("row="+i+";col="+j+";res="+res);
+                    ans = Math.max(ans,bfs(grid,i,j));
                 }
             }
         }
@@ -29,85 +34,42 @@ public class Amazon_Interview {
         return ans;
     }
 
-//    private void bfsFill(char[][] grid,int r, int c){
-//        //mark has come
-//        grid[r][c] = '2';
-//        Deque<Integer> queue = new LinkedList<>();
-//        // 用一个数保存两个数字！！(因为c<nc)
-//        int code = r*nc +c;
-//        queue.addFirst(code);
-//        while (!queue.isEmpty()){
-//            code = queue.pollLast(); //can't use get last, as it won't delete la
-//            int x = code/nc;
-//            int y = code%nc;
-//            //search up, and mark it to '0'
-//            if (x>0 && grid[x-1][y] == '1'){
-//                //search deeper
-//                queue.addFirst((x-1)*nc+y);
-//                grid[x-1][y] = '0';
-//            }
-//            else if(x<nr-1 && grid[x+1][y] == '1'){
-//                grid[x+1][y] = '0';
-//            }
-//            else if(y>0 && grid[x][y-1] == '1'){
-//                grid[x][y-1] = '0';
-//            }
-//            else if(y<nc-1 && grid[x][y+1] == '1'){
-//                grid[x][y+1] = '0';
-//            }
-//            else {
-//                //search deeper
-//                queue.addFirst((x-1)*nc+y);
-//                //down
-//                queue.addFirst((x+1)*nc+y);
-//                //left
-//                queue.addFirst(x*nc+y-1);
-//                //right
-//                queue.addFirst(x*nc+y+1);
-//
-//            }
-//        }
-//    }
-//
 
-
-    private boolean bfs(char[][] grid,int r, int c, int level){
-        System.out.println("r="+r+";c="+c+";level="+level);
+    private int bfs(char[][] grid,int r, int c){
+     //   System.out.println("r="+r+";c="+c+";level="+level);
 
         if (!inArea(grid, r, c) ){
-            return false;
+            return Integer.MAX_VALUE;
         }
         if ( findOne(grid,r,c)){
-            String key = String.valueOf(r) +"-"+String.valueOf(c);
-            map.put(key,level);
-            return true;
+            return 1;
         }
         if ( grid[r][c] == '2'){
-            return false;
+            return Integer.MAX_VALUE;
         }
-
-        System.out.println("mark to '2' r="+r+";c="+c+";level="+level+";grid[r][c]="+grid[r][c]);
-//        if (grid[r][c] == '2'){
-//            return;
-//        }
-
-//        if (grid[r][c] != '1' ){
-//            if (ans <=level) ans = level+1;
-//            return;
-//        }
-
-        grid[r][c] = '2';
-        boolean r1 = bfs(grid, r - 1, c, level+1);
-        boolean r2 = bfs(grid, r + 1, c, level+1);
-        boolean c1 = bfs(grid, r, c - 1, level+1 );
-        boolean c2 = bfs(grid, r, c + 1, level+1);
-
-        System.out.println("mark back to '0' r="+r+";c="+c+";level="+level+";grid[r][c]="+grid[r][c]);
-        grid[r][c] = '0';
-
-        return r1 && r2 && c1 && c2;
+    // missing a condition to terminate
+          grid[r][c] = '2';
+          int c2 = bfs(grid, r, c + 1);
+          int c1 = bfs(grid, r, c - 1);
+          int r2 = bfs(grid, r + 1, c);
+          int r1 = bfs(grid, r - 1, c);
+          // clean up
+          grid[r][c] = '0';
+          int minR = Math.min(r1, r2);
+          int minC = Math.min(c1, c2);
+          //        if (minR<0) {
+          //            minR = 1;
+          //        }
+          //        if (minC<0) {
+          //            minC = 1;
+          //        }
+          return Math.min(minC, minR) + 1;
     }
     private boolean findOne(char[][] grid,int r, int c){
+
+        if (inArea(grid,r,c) && grid[r][c] == '1'){
+            return true;
+        }
         if (inArea(grid,r-1,c) && grid[r-1][c] == '1'){
             return true;
         }
@@ -135,10 +97,16 @@ class test{
         Amazon_Interview solution = new Amazon_Interview();
 
         char[][] grid = new char[4][5];
-        grid[0]= new char[]{'0', '1', '1', '0', '1'};
-        grid[1]= new char[]{'0', '1', '0', '1', '0'};
-        grid[2]= new char[]{'0', '0', '0', '0', '1'};
-        grid[3]= new char[]{'0', '1', '0', '0', '0'};
+//        grid[0]= new char[]{'0', '0', '0', '0', '0'};
+//        grid[1]= new char[]{'0', '0', '0', '1', '0'};
+//        grid[2]= new char[]{'0', '0', '0', '0', '1'};
+//        grid[3]= new char[]{'0', '1', '0', '0', '0'};
+
+
+        grid[0]= new char[]{'0', '0', '0', '0', '0'};
+        grid[1]= new char[]{'0', '0', '0', '0', '0'};
+        grid[2]= new char[]{'0', '0', '0', '0', '0'};
+        grid[3]= new char[]{'0', '0', '0', '0', '1'};
 
         int res = solution.daysOfUpdate(4,5,grid);
         System.out.println("res="+res);
