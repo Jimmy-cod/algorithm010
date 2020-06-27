@@ -15,6 +15,7 @@ public class LC_49_Group_anagrams {
         HashMap<String,List<String>> map = new HashMap<>();
         for (String s : strs){
             char[] c = s.toCharArray();
+            //this is the key
             Arrays.sort(c);
             String key = String.valueOf(c);//c.toString();
             if (!map.containsKey(key)){
