@@ -35,6 +35,24 @@ public class Amazon_Interview {
     }
 
 
+    private int search (char[][] grid,int r, int c,int level){
+
+        if (inArea(grid,r-level,c) && grid[r-level][c] == '1'){
+            return level;
+        }
+        if (inArea(grid,r+level,c) && grid[r+level][c] == '1'){
+            return level;
+        }
+        if (inArea(grid,r,c-level) && grid[r][c-level] == '1'){
+            return level;
+        }
+        if (inArea(grid,r,c+level) && grid[r][c+level] == '1'){
+            return level;
+        }
+
+        return 0;
+    }
+
     private int bfs(char[][] grid,int r, int c){
      //   System.out.println("r="+r+";c="+c+";level="+level);
 
@@ -48,13 +66,15 @@ public class Amazon_Interview {
             return Integer.MAX_VALUE;
         }
     // missing a condition to terminate
-          grid[r][c] = '2';
+        grid[r][c] = '2';
+
           int c2 = bfs(grid, r, c + 1);
+          int r1 = bfs(grid, r - 1, c);
+
           int c1 = bfs(grid, r, c - 1);
           int r2 = bfs(grid, r + 1, c);
-          int r1 = bfs(grid, r - 1, c);
           // clean up
-          grid[r][c] = '0';
+        grid[r][c] = '0';
           int minR = Math.min(r1, r2);
           int minC = Math.min(c1, c2);
           //        if (minR<0) {
@@ -96,19 +116,23 @@ class test{
     public static void main(String[] args) {
         Amazon_Interview solution = new Amazon_Interview();
 
-        char[][] grid = new char[4][5];
+//        char[][] grid = new char[4][5];
 //        grid[0]= new char[]{'0', '0', '0', '0', '0'};
 //        grid[1]= new char[]{'0', '0', '0', '1', '0'};
 //        grid[2]= new char[]{'0', '0', '0', '0', '1'};
 //        grid[3]= new char[]{'0', '1', '0', '0', '0'};
 
+        int row =2,col =4;
+        char[][] grid = new char[2][4];
+        grid[0]= new char[]{'0', '0', '0', '0'};
+        grid[1]= new char[]{'0', '0', '0', '1'};
 
-        grid[0]= new char[]{'0', '0', '0', '0', '0'};
-        grid[1]= new char[]{'0', '0', '0', '0', '0'};
-        grid[2]= new char[]{'0', '0', '0', '0', '0'};
-        grid[3]= new char[]{'0', '0', '0', '0', '1'};
+//        grid[0]= new char[]{'0', '0', '0', '0', '0'};
+//        grid[1]= new char[]{'0', '0', '0', '0', '0'};
+//        grid[2]= new char[]{'0', '0', '0', '0', '0'};
+//        grid[3]= new char[]{'0', '0', '0', '0', '1'};
 
-        int res = solution.daysOfUpdate(4,5,grid);
+        int res = solution.daysOfUpdate(row,col,grid);
         System.out.println("res="+res);
     }
 }
