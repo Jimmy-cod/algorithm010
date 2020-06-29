@@ -30,5 +30,4 @@ def DFS(self, tree):
    	# other processing work 
    	...
 ```
-
 ![](.NOTE_images/bfs-dfs.png)
