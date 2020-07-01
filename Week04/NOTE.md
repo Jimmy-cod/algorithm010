@@ -30,4 +30,22 @@ def DFS(self, tree):
    	# other processing work 
    	...
 ```
+
+## BFS 代码模板
+```$xslt
+# Python
+def BFS(graph, start, end):
+    visited = set()
+	queue = [] 
+	queue.append([start]) 
+	while queue: 
+		node = queue.pop() 
+		visited.add(node)
+		process(node) 
+		nodes = generate_related_nodes(node) 
+		queue.push(nodes)
+	# other processing work 
+	...
+
+```
 ![](.NOTE_images/bfs-dfs.png)

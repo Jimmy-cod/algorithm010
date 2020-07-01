@@ -54,13 +54,14 @@ public class LC_200_number_of_islands {
         }
         nr = grid.length;
         nc = grid[0].length;
-        for(int i=0;i<nr;i++)
+        for(int i=0;i<nr;i++) {
             for(int j=0;j<nc;j++){
                 if(grid[i][j]=='1'){
                     bfsFill(grid,i,j);
                     count++;
                 }
             }
+        }
         return count;
     }
 

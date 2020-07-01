@@ -10,20 +10,20 @@ public class LC51_n_queens {
         if (n <= 0) {
             return res;
         }
-        int[] nums = new int[n];
+        int[] queens = new int[n];
         for (int i=0;i<n;i++){
-            nums[i] = i;
+            queens[i] = i;
         }
         Set<Integer> cols = new HashSet<>();
         Set<Integer> master  = new HashSet<>();
         Set<Integer> slaver  = new HashSet<>();
         Stack<Integer> temp = new Stack<>();
-        backtrack(n,cols,master,slaver,temp,0,nums,res);
+        backtrack(n,cols,master,slaver,temp,0,queens,res);
         return res;
     }
 
     private void backtrack(int n, Set<Integer> cols, Set<Integer> master, Set<Integer> slaver,
-                           Stack<Integer> stack, int row,int[] nums,List<List<String>> res) {
+                           Stack<Integer> stack, int row,int[] queens,List<List<String>> res) {
         if (row ==n){
             List<String> board = convert2board(stack, n);
             res.add(board);
@@ -38,11 +38,11 @@ public class LC51_n_queens {
             && !slaver.contains(i-row)
             ){
                 //记录queen位置
-                stack.push(nums[i]);
+                stack.push(queens[i]);
                 cols.add(i);
                 master.add(i+row);
                 slaver.add(i-row);
-                backtrack(n,cols,master,slaver,stack,row+1,nums,res);
+                backtrack(n,cols,master,slaver,stack,row+1,queens,res);
 
                 stack.pop();
                 cols.remove(i);
