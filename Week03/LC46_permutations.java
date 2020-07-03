@@ -29,7 +29,7 @@ class Solution {
             res.add(Arrays.stream(nums).boxed().collect(Collectors.toList()));
             return;
         }
-
+        //no swap, original list
         backtrack(res, nums, level + 1);
 
         for (int i = 0; i < level; i++) {
