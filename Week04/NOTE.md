@@ -49,3 +49,9 @@ def BFS(graph, start, end):
 
 ```
 ![](.NOTE_images/bfs-dfs.png)
+
+#二分查找
+二分查找的前提  
+1. 目标函数单调性 （单调递增或递减）
+2. 存在上下界 （bounded)
+3. 能够通过索引访问 （index accessible)
