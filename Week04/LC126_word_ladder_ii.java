@@ -2,8 +2,8 @@ package Week04;
 
 import java.util.*;
 
-public class LC128_word_ladder_ii {
-    class Solution {
+public class LC126_word_ladder_ii {
+    static class Solution {
 
         public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
 
@@ -81,5 +81,16 @@ public class LC128_word_ladder_ii {
             }
             return res;
         }
+    }
+
+
+    public static void main(String[] args) {
+        String beginWord = "hit";
+        String endWord = "cog";
+        List<String> wordList = new ArrayList<>();
+        String[] wordListArray = new String[]{"hot", "dot", "dog", "lot", "log", "cog"};
+        Collections.addAll(wordList, wordListArray);
+        Solution solution = new Solution();
+
     }
 }

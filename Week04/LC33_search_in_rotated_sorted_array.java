@@ -3,9 +3,14 @@ package Week04;
 public class LC33_search_in_rotated_sorted_array {
 
     //还是用二分查找
-    //1.如果左<右，表示这部分是排序的,另一部分没有排序
-    //2.在排序这部分找,如果target在左右值间，说明target在有序这边
-    //3.否则在无序这边，据继续递归查找
+    //1.nums[mid]==target，return mid
+    //1.如果左<=mid，表示这部分是排序的,另一部分没有排序
+    // a.nums[left]<=target<nums[mid]在左右值间，说明target在有序这边,收缩右边
+    // b.否则在无序这边，收缩左边
+    //2. 有序在右边
+    // a. nums[mid]<target<=nums[mid]说明target在有序这边,收缩左边
+    // b.否则在无序这边，收缩右边
+
     public int search(int[] nums, int target) {
         int mid,left=0;
         int right=nums.length-1;
