@@ -69,7 +69,7 @@ public class LC127_word_ladder {
             if (wordSet.size() == 0|| !wordSet.contains(endWord)){
                 return 0;
             }
-            Deque<String> queue = new LinkedList<String>();
+            Deque<String> queue = new ArrayDeque<>();
             queue.addFirst(beginWord);
             Set<String> visited = new HashSet<String>();
             visited.add(beginWord);
