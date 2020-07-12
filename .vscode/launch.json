@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BinaryHeap<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week02.BinaryHeap",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC_239_sliding_window_maximum<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week02.LC_239_sliding_window_maximum",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC_347_top_k_frequent_elements<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week02.LC_347_top_k_frequent_elements",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week02.test",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC111_min_depth_b_tree<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week03.LC111_min_depth_b_tree",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC46_permutations<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week03.LC46_permutations",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC_17_Letter_combinations_of_phone<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week03.LC_17_Letter_combinations_of_phone",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Lc_69_sqrtx<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week03.Lc_69_sqrtx",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week03.Test",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC126_word_ladder_ii<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week04.LC126_word_ladder_ii",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC127_word_ladder<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week04.LC127_word_ladder",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC153_find_minimum_in_rotated_sorted_array<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week04.LC153_find_minimum_in_rotated_sorted_array",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LC529_minesweeper<algorithm010_c257f461>",
+            "request": "launch",
+            "mainClass": "Week04.LC529_minesweeper",
+            "projectName": "algorithm010_c257f461"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<algorithm010_c257f461>(1)",
+            "request": "launch",
+            "mainClass": "Week04.test",
+            "projectName": "algorithm010_c257f461"
+        }
+    ]
+}

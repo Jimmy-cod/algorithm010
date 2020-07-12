@@ -1,0 +1,100 @@
+/*
+第一次写道这样就试着运行，链表和Recursive不清楚 :-)
+*/
+class Solution {
+
+    ListNode res = new ListNode();
+    
+    public ListNode reverseList(ListNode head) {
+      
+        if (head == null){
+            return null;
+        }
+        
+        res.next = head;
+        res = res.next;
+        
+        return reverseList(head.next);
+    }
+    
+}
+
+//因为要达到末尾时才能够进行连接，所以要在出栈的时候（recursive 调用后）
+class Solution {
+
+    ListNode res = new ListNode();
+
+    public ListNode reverseList(ListNode head) {
+        helper(head);
+        return res;
+    }
+    private ListNode helper(ListNode node){
+        if(node == null || node.next == null){
+            res = node;
+            return node;
+        }
+        ListNode temp = helper(node.next);
+        temp.next = node;
+        node.next = null;
+        return node;
+    }
+}
+
+/*看完题解后：
+1. 迭代法: 用 prev, curr, head 反转指针
+prev = head;
+curr = head.next;
+curr.next = prev; //反转指针
+head = curr;
+
+*/
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null, temp, curr = head;
+        while(curr != null){
+            temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        //at the end curr =null, it mush return prev
+        return prev;
+    }
+    //时间复杂度：O(n)O(n)
+    //空间复杂度：O(1)O(1)
+}
+
+/* 2.递归
+递归就是压栈，在递归调用前的code就是压栈前要执行的，在递归调用后的code就是出栈后执行的。
+有没有一种方法/公式，知道是这段代码是放在递归前还是递归后
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        //terminator
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode node = reverseList(head.next); //这里会一直迭代直到触发terminator（走到链表最后），然后才执行下面语句
+        head.next.next = head;
+        head.next = null; //这里是为了断开连接
+        return node;
+    }
+}
+
+/* 递归 2
+ return helper(nextNode, curr); //用value互换来达到指针反转
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        return helper(head, null);
+    }
+
+    private ListNode helper(ListNode curr, ListNode newList){
+        if (curr == null){
+            return newList;
+        }
+        ListNode nextNode = curr.next;
+        curr.next = newList;
+        return helper(nextNode, curr); //用参数互换来达到指针反转
+    }
+}
