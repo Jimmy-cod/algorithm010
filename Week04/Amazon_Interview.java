@@ -1,5 +1,7 @@
 package Week04;
 
+import javafx.util.Pair;
+
 import java.util.*;
 
 public class Amazon_Interview {
@@ -29,8 +31,8 @@ public class Amazon_Interview {
     private int bfs(char[][] grid,int row, int col){
         int level = 0;
         int x,y;
-        Queue<String> queue = new ArrayDeque<>();
-        Set<String> visited = new HashSet<String>();
+        Queue<Pair<Integer,Integer>> queue = new ArrayDeque<>();
+        Set<Pair<Integer,Integer>> visited = new HashSet<>();
         addQueue(row-1,col,queue);
         addQueue(row+1,col,queue);
         addQueue(row,col-1,queue);
@@ -39,11 +41,10 @@ public class Amazon_Interview {
             level++;
             int size = queue.size();
             for (int i =0;i<size;i++){
-                String key = queue.poll();
+                Pair<Integer,Integer> key = queue.poll();
                 if (!visited.contains(key)){
-                    String[] rc = key.split("-");
-                    x = Integer.valueOf(rc[0]);
-                    y = Integer.valueOf(rc[1]);
+                    x = key.getKey();
+                    y = key.getValue();
 
                     if (grid[x][y] == '1') {
                         return level;
@@ -59,9 +60,9 @@ public class Amazon_Interview {
         return 0;
     }
 
-    private void addQueue(int r, int c, Queue<String> queue) {
+    private void addQueue(int r, int c, Queue<Pair<Integer,Integer>> queue) {
         if (0<= r && r<nr && 0<=c && c<nc){
-            queue.add(String.valueOf(r)+"-"+String.valueOf(c));
+            queue.add(new Pair<>(r,c));
         }
     }
 }

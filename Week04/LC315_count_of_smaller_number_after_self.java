@@ -43,7 +43,6 @@ public class LC315_count_of_smaller_number_after_self {
         for (int i = len -1;i>=0;i--){
             root = MyTreeNode.create(root,nums[i],i,res);
         }
-
         return  Arrays.asList(res);
     }
 
@@ -71,8 +70,16 @@ public class LC315_count_of_smaller_number_after_self {
                 //统计右边是否还有更小的元素
                 root.right = create(root.right,v,i,res);
             }
-
             return root;
+        }
+    }
+
+    static class Test {
+        public static void main(String[] args) {
+
+            int[] nums = {5,2,6,1};
+            LC315_count_of_smaller_number_after_self s = new LC315_count_of_smaller_number_after_self();
+            List<Integer> res = s.countSmaller_2(nums);
         }
     }
     
