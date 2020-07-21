@@ -10,6 +10,7 @@ public class Amazon_Interview {
 * 最后输出最大的
 * */
     int nr,nc;
+    int[][] dir = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
     public int daysOfUpdate(int rows, int columns, char[][] grid) {
         int ans = -1;
         if (rows <=0 || columns<=0) {
@@ -33,10 +34,10 @@ public class Amazon_Interview {
         int x,y;
         Queue<Pair<Integer,Integer>> queue = new ArrayDeque<>();
         Set<Pair<Integer,Integer>> visited = new HashSet<>();
-        addQueue(row-1,col,queue);
-        addQueue(row+1,col,queue);
-        addQueue(row,col-1,queue);
-        addQueue(row,col+1,queue);
+        for (int[] d : dir) {
+            addQueue(row+d[0],col+d[1],queue);
+        }
+
         while(!queue.isEmpty()){
             level++;
             int size = queue.size();
@@ -50,10 +51,10 @@ public class Amazon_Interview {
                         return level;
                     }
                     visited.add(key);
-                    addQueue(x-1,y,queue);
-                    addQueue(x+1,y,queue);
-                    addQueue(x,y-1,queue);
-                    addQueue(x,y+1,queue);
+
+                    for (int[] d : dir) {
+                        addQueue(x+d[0],y+d[1],queue);
+                    }
                 }
             }
         }

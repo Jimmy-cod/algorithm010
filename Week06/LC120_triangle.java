@@ -1,6 +1,8 @@
 package Week06;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class LC120_triangle {
     public int minimumTotal(List<List<Integer>> triangle) {
