@@ -8,6 +8,10 @@ import java.util.Set;
 public class LC212_word_search_ii {
     /*
     * 利用字典树可以加快单词搜索
+    * 1. 建立words的字典树
+    * 2. 在字典树叶子节点加val储存word
+    * 3. 在board里沿着字典树，找到叶子节点了，记录val
+    * 4. 注意标记走过的和边界
     * */
     int[][] orient = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
     int m, n;
