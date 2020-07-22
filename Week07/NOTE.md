@@ -21,7 +21,8 @@ class UnionFind {
 		}
 	} 
 	public int find(int p) { 
-		while (p != parent[p]) { 
+		while (p != parent[p]) {
+            //压缩路径 
 			parent[p] = parent[parent[p]]; 
 			p = parent[p]; 
 		}
