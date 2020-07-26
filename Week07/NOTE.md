@@ -72,7 +72,7 @@ Balance Factor:
 右左旋 （右左子树）  
     先下面的左子树右旋，变成了右右子树，再做整个子树左旋
 
-##Red-black Tree
+## Red-black Tree  
 红黑树是一种**近似平衡**的二叉树(Binary Search Tree),  
 它能够保证任何一个节点的左右子树**高度差小于两倍**。  
  1.每个节点要么是红或黑  
