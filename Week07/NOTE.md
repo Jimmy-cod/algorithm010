@@ -81,7 +81,7 @@ Balance Factor:
  4.不能有相邻接的两个红节点  
  5.任何一节点到其每个叶子的所有路径都包含相同数目的黑色结点  
  
- ### AVL Tree vs  Red-black Tree  
+ ## AVL Tree vs  Red-black Tree  
  1.AVL trees provide faster lookups than Red Black Trees bacause they are more strictly balanced.  
  
  2.Red Black Trees provide faster insertion and removal operations than AVL trees as fewer rotations are done due to relatively relaxed balancing.  
