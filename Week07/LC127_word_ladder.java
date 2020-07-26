@@ -1,9 +1,6 @@
 package Week07;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class LC127_word_ladder {
     //Two-ended BFS

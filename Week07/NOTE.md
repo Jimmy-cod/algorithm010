@@ -38,3 +38,38 @@ class UnionFind {
 }
 ```
   
+## Self-balancing binary search tree  
+2–3 tree  
+AA tree  
+AVL tree  
+B-tree  
+Red–black tree  
+Scapegoat tree  
+Splay tree  
+Treap  
+Weight-balanced tree  
+
+# AVL tree
+每个node 要有个int记录balance factor
+Balance Factor:
+    它的右子树高度减去它的左子树高度  
+    balance factor = {-1,0,1}
+旋转操作：  
+左旋  （右右子树）  
+
+右旋  （左左子树）  
+    右旋时，挂在在左右两边之间的子树要换父节点  
+       5              4  
+      / \            / \  
+     4   6   =>     2   5  
+    / \            /   / \  
+   2   3          1   3   6    (3 要换父节点)  
+  /
+ 1
+ 
+左右旋 （左右子树）  
+    先下面的右子树左旋，变成了左左子树，再做整个子树右旋    
+右左旋 （右左子树）  
+    先下面的左子树右旋，变成了右右子树，再做整个子树左旋
+
+  
