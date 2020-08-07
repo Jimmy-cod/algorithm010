@@ -10,3 +10,21 @@ if (obstacleGrid[i][j]==0){ //没障碍物
     dp[i][j] = 0;  
 }
 ```
+
+```reverseString
+for (int i=0, j=s.length -1;i<j; ++i, --j){
+    char tmp = s[i];s[i]=s[j];s[j]=tmp;
+}
+```
+```aidl
+for (int i=0; i< a.lenght-1;++i)
+    for (int j=i+1;j<a.lenght; ++j)
+```
+
+```aidl
+public String reverseWords(String s){
+    String[] words = s.trim().split(" +");
+    Collections.reverse(Arrays.asList(words));
+    return String.join(" ", words);
+}
+```
