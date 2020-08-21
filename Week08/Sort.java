@@ -38,12 +38,13 @@ public class Sort {
         }
 
 //   归并排序（Merge Sort）:
-//   采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。
-    /*
+//   采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，
+//   再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。
+/*
 1.把长度为n的输入序列分成两个长度为n/2的子序列；
 2.对这两个子序列分别采用归并排序；
 3.将两个排序好的子序列合并成一个最终的排序序列。
-    */
+*/
 
     public int[] mergeSort(int[] arr){
         int len = arr.length;
@@ -59,8 +60,11 @@ public class Sort {
         mergeSort(arr, mid+1, right);
         merge(arr,left,mid,right);
     }
-
+/*
+merge 函数的作用就是，将已经有序的 A[p…q]和 A[q+1…r]合并成一个有序的数组，并且放入 A[p…r]
+ */
     private void merge(int[] arr, int left, int mid, int right) {
+        //申请一个大小跟A[p...r]一样的临时数组
         int[] temp = new int[right-left+1];
         int i = left;
         int j = mid+1;
@@ -80,10 +84,10 @@ public class Sort {
 //                j++;
 //            }
         }
-
+        // 将剩余的数据拷贝到临时数组tmp
         while (i <= mid) temp[k++] = arr[i++];
         while (j <= right) temp[k++] = arr[j++];
-
+        // 将tmp中的数组拷贝回A[p...r]
         for (int p = 0; p < temp.length; p++) {
             arr[left + p] = temp[p];
         }

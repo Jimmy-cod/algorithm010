@@ -26,16 +26,16 @@ JDK 1.7 有源码分析<br/>
 构造一个带指定初始容量和加载因子的空 HashMap。<br/>
 
 常量<br/>
-static final int DEFAULT_INITIAL_CAPACITY = 16;<br/>
-初始容量：16<br/>
-static final int MAXIMUM_CAPACITY = 1 << 30;<br/>
-最大容量：2的30次方 => 1073741824<br/>
-static final float DEFAULT_LOAD_FACTOR = 0.75f;<br/>
-负载因子：75%<br/>
+static final int DEFAULT_INITIAL_CAPACITY = 16;  
+初始容量：16  
+static final int MAXIMUM_CAPACITY = 1 << 30;  
+最大容量：2的30次方 => 1073741824  
+static final float DEFAULT_LOAD_FACTOR = 0.75f;  
+负载因子：75%  
 
 ** put(Object key,Object value)方法：
 
-作用是存储一个键-值对<br/>
+作用是存储一个键-值对  
 
     public V put(K key, V value) {
         if (key == null)

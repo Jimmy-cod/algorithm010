@@ -18,14 +18,14 @@ public class Amazon_Interview {
 
         nr = rows;
         nc = columns;
-        LinkedList<Integer> list = new LinkedList<>();
+//        LinkedList<Integer> list = new LinkedList<>();
 
         for (int i=0;i<rows;i++){
             for(int j = 0;j<columns;j++){
 
                 if (grid[i][j] == '0'){
                     int res = bfs(grid,i,j);
-                    System.out.println("row="+i+";col="+j+";res="+res);
+//                    System.out.println("row="+i+";col="+j+";res="+res);
                     ans = Math.max(ans,bfs(grid,i,j));
                 }
             }

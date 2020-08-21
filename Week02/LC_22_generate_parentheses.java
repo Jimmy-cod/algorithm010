@@ -114,7 +114,7 @@ public class LC_22_generate_parentheses {
             val = s;
         }
     }
-    // Recusion
+    // Recursion
     private void generate(int left, int right, int n, String sb, List<String> res) {
         System.out.println("left = "+left);
         //terminator
