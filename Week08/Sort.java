@@ -1,6 +1,7 @@
 package Week08;
 
 import java.util.Arrays;
+import java.util.Collection;
 
 public class Sort {
 //https://www.cnblogs.com/onepixel/p/7674659.html
@@ -145,6 +146,7 @@ merge 函数的作用就是，将已经有序的 A[p…q]和 A[q+1…r]合并成
 class Test {
 
     public static void main(String[] args) {
+        Collection<Integer> test ;
         int[] arr = {2,3,1,4};
         Sort sort = new Sort();
 //        int[] ans1 = sort.insertSort(arr);

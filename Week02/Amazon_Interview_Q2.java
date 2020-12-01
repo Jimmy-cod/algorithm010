@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Amazon_Interview {
+public class Amazon_Interview_Q2 {
 
     //找到'0'， 然后看前后左右要几次迭代才能发现'1'.
     //记录所有这些次数，return 最大值
@@ -114,23 +114,23 @@ public class Amazon_Interview {
 
 class test{
     public static void main(String[] args) {
-        Amazon_Interview solution = new Amazon_Interview();
+        Amazon_Interview_Q2 solution = new Amazon_Interview_Q2();
 
-//        char[][] grid = new char[4][5];
+        int row =4,col =5;
+        char[][] grid = new char[4][5];
 //        grid[0]= new char[]{'0', '0', '0', '0', '0'};
 //        grid[1]= new char[]{'0', '0', '0', '1', '0'};
 //        grid[2]= new char[]{'0', '0', '0', '0', '1'};
 //        grid[3]= new char[]{'0', '1', '0', '0', '0'};
 
-        int row =2,col =4;
-        char[][] grid = new char[2][4];
-        grid[0]= new char[]{'0', '0', '0', '0'};
-        grid[1]= new char[]{'0', '0', '0', '1'};
-
-//        grid[0]= new char[]{'0', '0', '0', '0', '0'};
-//        grid[1]= new char[]{'0', '0', '0', '0', '0'};
-//        grid[2]= new char[]{'0', '0', '0', '0', '0'};
-//        grid[3]= new char[]{'0', '0', '0', '0', '1'};
+//        char[][] grid = new char[4][5];
+////        grid[0]= new char[]{'0', '0', '0', '0'};
+////        grid[1]= new char[]{'0', '0', '0', '1'};
+//
+        grid[0]= new char[]{'0', '0', '0', '0', '0'};
+        grid[1]= new char[]{'0', '0', '0', '0', '0'};
+        grid[2]= new char[]{'0', '0', '0', '0', '0'};
+        grid[3]= new char[]{'0', '0', '0', '0', '1'};
 
         int res = solution.daysOfUpdate(row,col,grid);
         System.out.println("res="+res);

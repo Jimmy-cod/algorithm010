@@ -28,7 +28,7 @@ def dfs(node, visited):
 		if next_node not in visited: 
 			dfs(next_node, visited)
 ```
-非递归写法:  
+Trivial 非递归写法:  
 ```
 def DFS(self, tree): 
    	if tree.root is None: 

@@ -1,5 +1,15 @@
 学习笔记
-
+# Sort
+    1. Compare Sort  
+    big O can not smale than O(nlogn).
+    n(logn): heap, mergo, quick
+    
+    2. Non-compare Sort
+    can be O(n)  
+    
+    https://www.cnblogs.com/onepixel/p/7674659.html
+    
+    
 # 位运算
 
 ### and运算 &

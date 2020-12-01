@@ -47,18 +47,22 @@ curr = head.next;
 curr.next = prev; //反转指针
 head = curr;
 
+定义两个指针： pre 和 cur ；pre 在前 cur 在后。
+每次让 pre 的 next 指向 cur ，实现一次局部反转
+局部反转完成之后，pre 和 cur 同时往前移动一个位置
+循环上述过程，直至 pre 到达链表尾部
+
 */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        ListNode prev = null, temp, curr = head;
-        while(curr != null){
-            temp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = temp;
+        ListNode cur = null, pre=head;
+        while(pre!=null){
+            ListNode tmp = pre.next;
+            pre.next = cur;
+            cur = pre;
+            pre = tmp;
         }
-        //at the end curr =null, it mush return prev
-        return prev;
+        return cur;
     }
     //时间复杂度：O(n)O(n)
     //空间复杂度：O(1)O(1)

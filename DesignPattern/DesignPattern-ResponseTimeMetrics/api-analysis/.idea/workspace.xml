@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c2f2ed84-88fc-4bb0-88ac-5852054fbefe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../AfterGraduation/LC1080_insufficient_nodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Interview/HSBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week08/HeapSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week08/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/production/algorithm010/Week04/NOTE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/production/algorithm010/Week04/NOTE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/production/algorithm010/Week08/NOTE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/production/algorithm010/Week08/NOTE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/alert/AlertRule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/alert/Alert_old.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/alert/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/alert/NotificationEmergencyLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/DefaultApiAuthenticatorImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/IApiAuthenticator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/request/ApiRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/storage/CredentialStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/storage/MysqlCredentialStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/token/AuthToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/util/MD5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CodeDesign/auth/util/UrlUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/DesignPattern-ResponseTimeMetrics.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_strom_utils_common_1_0_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-analysis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week08/NOTE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week08/NOTE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week08/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week08/QuickSort.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1gPu909t09jhrkuoWk0jc907Qp7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RunManager">
+    <configuration name="BeanUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-analysis" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BeanUtilsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BeanUtilsTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2f2ed84-88fc-4bb0-88ac-5852054fbefe" name="Default Changelist" comment="" />
+      <created>1598028393235</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598028393235</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1598489212238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1598489212238" />
+    <state x="209" y="33" key="new project wizard" timestamp="1598489337039">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1598489337039" />
+  </component>
+</project>
